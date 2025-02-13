@@ -1,0 +1,86 @@
+.page{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width: 1200px) {
+    .page {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+/* タブレット: 3*2 のレイアウト */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .page {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/* スマートフォン: 6*1 のレイアウト */
+@media screen and (max-width: 767px) {
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+}
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .card__title {
+    color: #282828;
+    font-size: 14px;
+  }
+  
+  .card__description {
+    color: #282828;
+    font-size: 12px;
+  }
+  
+  .card__img-top {
+    width: 288px;
+    height: 182px;
+    margin: 20px;
+  }
+  
+  .header {
+    background-color: #ffffff;
+  }
+  
+  body {
+    background-color: #c4c4c4;
+  }
+  
+  .footer {
+    background-color: #ffffff;
+  }
+
+  @media screen and (min-width: 1200px) {
+        .card__title {
+            font-size: 14px;
+          }
+        .card__description {
+            font-size: 12px;
+        }
+  }
+
+  @media screen and (max-width: 1199px) and  (max-width: 768px) {
+    .card__title {
+        font-size: 12px;
+      }
+    .card__description {
+        font-size: 10px;
+    }
+}
+
+ @media screen and (max-width: 320px) {
+    .card__title {
+        font-size: 10px;
+      }
+    .card__description {
+        display: none;
+    }
+}
