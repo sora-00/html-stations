@@ -2,7 +2,7 @@ data = "global data";
 
 // このreturnDataに代入される関数の形をアロー関数に変えて"global data"が表示されるようにしてください
 // ↓関数の中の処理は変更しないでください
-const returnThisData = function () {
+const returnThisData = () => {
   return this.data;
 };
 // ↑関数の中の処理は変更しないでください
@@ -12,6 +12,6 @@ const object = {
   func: returnThisData,
 };
 
-function getData() {
+getData = () => {
   return object.func();
 }
